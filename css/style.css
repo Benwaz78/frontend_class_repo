@@ -1,0 +1,289 @@
+@font-face {
+    font-family: 'abelregular';
+    src: url('../fonts/abel-regular.woff2') format('woff2'),
+         url('../fonts/abel-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pinyon_scriptregular';
+    src: url('../fonts/pinyonscript-regular.woff2') format('woff2'),
+         url('../fonts/pinyonscript-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*{
+    font-family: 'abelregular';
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+}
+
+#siteHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ .section-heading{
+        padding: 20px 0;
+        text-align: center;
+        background: url('../images/heading-bg.png') no-repeat center center;
+        background-size: 370px 100px;
+        margin-bottom: 20px;
+}
+
+.section-heading h2{
+    font-family: 'pinyon_scriptregular';
+    font-size: 30px;
+}
+
+.foot-item-container{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    /*TOP NAV STYLING STARTS HERE*/
+    #siteHeader{
+       padding: 7px;
+    }
+
+    #toggleBtn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000;
+        border-radius: 8px;
+        width: 50px;
+        height: 40px;
+    }
+
+    #toggleBtn > i{
+        font-size: 28px;
+        color: #000;
+    }
+    #topLogo{
+        width: 200px;
+        height: 60px;
+    }
+
+    #topLogo > img{
+        width: 100%;
+        height: auto;
+    }
+    /*TOP NAV STYLING ENDS HERE*/
+
+    /*NAV STYLING STARTS HERE*/
+
+    #desktopMenu{
+        display: none;
+    }
+
+    #siteNav{
+        background: #2B2828;
+        padding: 8px;
+    }
+
+    #siteNav ul li a{
+        color: #fff;
+        padding-bottom: 8px;
+        font-weight: bold;
+    }
+
+    /*NAV STYLING ENDS HERE*/
+
+
+    /*BANNER STYLING STARTS HERE*/
+
+        #banner{
+            background: url('../images/banner.png') no-repeat center center/cover;
+        }
+
+        #bannerContent{
+            color: #fff;
+            width: 90%;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            padding: 50px 0 100px 0;
+        }
+
+        #bannerContent > h2{
+            font-size: 30px;
+        }
+
+        #bannerContent > p{
+            font-family: 'pinyon_scriptregular';
+            margin-top: 20px;
+        }
+
+    /*BANNER STYLING ENDS HERE*/
+
+    /*FOOD ITEM STYLING STARTS HERE*/
+
+    #foodItem{
+        padding: 25px 0;
+    }
+
+    .foot-item-container{
+        text-align: center;
+    }
+
+    .foot-item-container figcaption{
+        margin-bottom: 15px;
+    }
+
+    .product-content{
+        font-size: 18px;
+        color: #000;
+    }
+
+    .product-name{
+        font-size: 30px;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .product-prize span{
+        font-size: 25px;
+        margin-right: 20px;
+        font-weight: bold;
+    }
+
+    .old-prize{
+        text-decoration: line-through;
+    }
+
+    .new-prize{
+        color: #fbde2d;
+    }
+
+
+    /*FOOD ITEM STYLING ENDS HERE*/
+
+
+    /*FOOTER STYLING STARTS HERE*/
+        #siteFooter{
+            background: rgba(104, 188, 175, 0.1);
+        }
+        #footerLogo{
+            width: 95%;
+            height: 120px;
+            margin-bottom: 10px;
+        }
+
+        #footerLogo > img{
+            width: 100%;
+            height: auto;
+        }
+
+        #siteFooter .container{
+            width: 100%;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        #footerLogo [class*="col-"] {
+            padding: 5px;
+        }
+
+        #footerLogo + .footer-content > p{
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .footer-content{
+            margin-bottom: 20px;
+        }
+
+        .footer-content > p{
+            font-size: 19px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .icon-container{
+            display: inline-block;
+            margin-right: 10px;
+            color: #000;
+            font-size: 35px;
+        }
+
+        .footer-widget > h3{
+            font-size: 30px;
+        }
+
+        .footer-post-contaoner{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .post-img-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            width: 80%;
+            height: 160px;
+        }
+
+        .post-img-container > img{
+            width: auto;
+            height: 150px;
+        }
+
+        .post-content > h4,
+        .post-content > p{
+            color: #000;
+        }
+
+        .post-content > h4{
+            font-size: 18px;
+            margin: 8px 0;
+        }
+
+        .post-content > p{
+            font-family: monospace;
+            font-size: 15px;
+        }
+
+    /*FOOTER STYLING ENDS HERE*/
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    #topLogo{
+        width: 200px;
+        height: 60px;
+    }
+
+
+    #topLogo > img{
+        width: 100%;
+        height: auto;
+    }
+
+    #toggleBtn{
+        display: none;
+    }
+
+    #siteNav{
+        display: none;
+    }
+
+    #desktopMenu{
+        display: block;
+    }
+}
