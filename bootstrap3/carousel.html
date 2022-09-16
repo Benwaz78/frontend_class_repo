@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <title>Carousel </title>
+    <style type="text/css">
+      
+    
+      #sergey{
+        background: url('../bootstrap2/images/Sergey-Brin.jpg') no-repeat center center/cover;
+      }
+
+      #jack{
+        background: url('../bootstrap2/images/jack.jpg') no-repeat center center/cover;
+      }
+
+      .overlay{
+        padding: 300px 0;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .carousel-caption {
+        position: absolute;
+        right: 15%;
+        bottom: 6.25rem;
+      }
+    </style>
+   
+  </head>
+  <body>
+
+    <div id="carouselExampleCaptions" class="carousel d-none d-sm-block slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+       
+      </div>
+     
+        <div class="carousel-inner">
+            <div class="carousel-item active" id="sergey">
+              <div class="overlay">
+              <div class="carousel-caption d-none d-md-block">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6" style="text-align: left;">
+                      <h3>Slide 1</h3>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi
+                      </p>
+                      <a href="#" class="btn btn-danger">Readmore</a>
+                    </div>
+                    <div class="col-md-6 text-left">
+                      <img src="images/01-2-300x300.png" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+            <div class="carousel-item" id="jack">
+              <div class="overlay">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+           </div>
+
+          </div>
+        </div>
+      
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+
+    
+
+   
+
+    
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="js/bootstrap.bundle.min.js"></script>   
+  </body>
+</html>
