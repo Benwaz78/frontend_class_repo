@@ -32,3 +32,5 @@ console.log(states["imo"])
 console.log(states.imo)
 console.log(states.abia)
 console.log(states.lagos)
+
+
