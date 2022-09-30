@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Element</title>
+</head>
+<body>
+
+        <ul id="listFood">
+            <li>Jellof Rice</li>
+            <li>Fried Rice</li>
+        </ul>
+
+        <button onclick="appendElement()">Append</button>
+        <button onclick="deleteElement()">Delete</button>
+
+        <script>
+
+            let appendElement = ()=>{
+                let li = document.createElement("li");
+                let text = document.createTextNode("Porridge Beans");
+                li.appendChild(text)
+                document.getElementById("listFood").appendChild(li);
+            }
+
+            let deleteElement = () =>{
+                document.getElementsByTagName("li")[2].remove();
+            }
+        </script>
+    
+</body>
+</html>
