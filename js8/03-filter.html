@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        main{
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        #content{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .column{
+            width: 33.33%;
+            border:1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:white;
+            font-size: 30px;
+        }
+
+        .portrait{
+            background-color: blue;
+            height: 430px;
+            display: none;
+        }
+
+        .landscape{
+            background-color: green;
+            height: 250px;
+        }
+
+
+    </style>
+   
+</head>
+<body>
+
+    <main>
+        <button id="landscape" onclick="showLandscape()">Landscape</button>
+        <button id="portrait" onclick="showPortrait()">Portrait</button>
+        <div id="content">
+            <div class="column portrait">
+                1
+            </div>
+            <div class="column portrait">
+                2
+            </div>
+            <div class="column landscape">
+                6
+            </div>
+            <div class="column portrait">
+                3
+            </div>
+            <div class="column landscape">
+                4
+            </div>
+            <div class="column landscape">
+                5
+            </div>
+            <div class="column landscape">
+                6
+            </div>
+        </div>
+    </main>
+
+
+    
+
+  <script>
+
+        let showLandscape = ()=>{
+            landscapeBtn = document.getElementById("landscape");
+            landscapeBtn.style.backgroundColor="red";
+            portraitBtn = document.getElementById("portrait");
+            portraitBtn.style.backgroundColor="";
+            landscape = document.getElementsByClassName("landscape");
+            portrait = document.getElementsByClassName("portrait");
+            for(l of landscape){
+                l.style.display = "block";
+                for(p of portrait){
+                    p.style.display = "none"
+                }
+            }
+        }
+
+        let showPortrait = ()=>{
+            portraitBtn = document.getElementById("portrait");
+            portraitBtn.style.backgroundColor = "blue"
+            landscapeBtn = document.getElementById("landscape");
+            landscapeBtn.style.backgroundColor="";
+            landscape = document.getElementsByClassName("landscape");
+            portrait = document.getElementsByClassName("portrait");
+            for(p of portrait){
+                p.style.display = "block";
+                for(l of landscape){
+                    l.style.display = "none"
+                }
+            }
+        }
+
+  </script>
+    
+</body>
+</html>

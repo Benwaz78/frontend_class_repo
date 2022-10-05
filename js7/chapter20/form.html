@@ -30,13 +30,15 @@
 
     <script>
 
-        document.getElementById("submitForm").addEventListener("submit", function(e){
-
-            e.preventDefault()
             let firstname = document.getElementById("firstname");
             let lastname = document.getElementById("lastname");
             let referrer = document.getElementById("referrer");
 
+
+        document.getElementById("submitForm").addEventListener("submit", function(e){
+
+            e.preventDefault()
+            
             if(firstname.value == ""){
                 firstname.style.border = "1px solid red";
                 document.getElementById("nameError") = "Firstname is required";

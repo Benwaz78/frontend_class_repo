@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Mouse Over</title>
+    <style>
+        #box{
+            width: 250px;
+            height: 250px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="box" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"></div>
+
+
+    <script>
+
+        let mouseOver = (obj)=>{
+            obj.style.backgroundColor = "yellow";
+        }
+
+        let mouseOut = (obj)=>{
+            obj.style.backgroundColor = "blue";
+        }
+    </script>
+
+   
+    
+</body>
+</html>

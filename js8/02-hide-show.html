@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Show</title>
+    <style>
+        #content{
+            height: 400px;
+            width: 400px;
+            background-color: red;
+            display: none;
+        }
+
+        #content.hide{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+
+    <button id="btn" onclick="hideShow()">Show</button>
+    <div id="content"></div>
+
+    <script>
+
+        let hideShow = ()=>{
+            let content = document.getElementById("content");
+            let btn = document.getElementById("btn");
+            if(btn.innerText == "Show"){
+                btn.innerText = "Hide";
+            }else{
+                btn.innerText = "Show";
+            }
+            content.classList.toggle("hide"); 
+           
+           
+        }
+    </script>
+    
+</body>
+</html>

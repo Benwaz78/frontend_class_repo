@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Processing</title>
+    <style>
+
+        body{
+            margin: 0;
+        }
+
+        main{
+            display: flex;
+        }
+
+        #sidebar{
+            width: 20%;
+            background-color: blue;
+            height: 100vh;
+        }
+        #content{
+            width: 80%;
+            background-color: red;
+            height: 100vh;
+
+        }
+
+        #sidebar.hide{
+            width: 0;
+        }
+
+        #content.hide{
+            width: 100%;
+        }
+
+       
+
+        header{
+            background-color: green;
+            height: 70px;
+        }
+
+     
+
+
+
+     
+
+       
+
+      
+
+        #btn{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 10px;
+            border:2px solid #fff;
+        }
+      
+
+
+    </style>
+</head>
+<body style="padding-left: 150px; padding-top:100px;">
+
+
+
+
+    <form id="submitForm">
+
+        <label>Firstname</label><br>
+        <input type="text" id="firstname"><br>
+        <span id="firstnameError"></span><br>
+        <br><br>
+        <label>Lastname</label><br>
+        <input type="text" id="lastname"><br>
+        <span id="lastnameError"></span><br>
+        <br><br>
+        <label>Referrer</label><br>
+        <select id="referrer">
+            <option value="Facebook">Facebook</option>
+            <option value="Twitter">Twotter</option>
+            <option value="Linkedin">Linkedn</option>
+            <option value="" selected>Choose</option>
+        </select><br>
+        <span id="referrerError"></span><br>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+
+   
+    
+   
+    <script>
+
+        let submitForm = document.getElementById("submitForm");
+        let firstname = document.getElementById("firstname");
+        let lastname = document.getElementById("lastname");
+        let referrer = document.getElementById("referrer");
+
+        submitForm.addEventListener("submit", function(e){
+            e.preventDefault();
+            if(firstname.value==""){
+                firstname.style.border="1px solid red";
+                document.getElementById("firstnameError").innerHTML = "First name is required"
+            }else{
+                firstname.style.border = "";
+                firstname.style.border = "1px solid green";
+                document.getElementById("firstnameError").innerHTML = ""
+                document.getElementById("firstnameError").innerHTML = "Firstname is correct"
+            }
+
+            if(lastname.value==""){
+                lastname.style.border="1px solid red";
+                document.getElementById("lastnameError").innerHTML = "last name is required"
+            }else{
+                lastname.style.border = "";
+                lastname.style.border = "1px solid green";
+               
+                document.getElementById("lastnameError").innerHTML = "last name is correct"
+            }
+
+            if(referrer.value==""){
+                referrer.style.border="1px solid red";
+                document.getElementById("referrerError").innerHTML = "referrer is required"
+            }else{
+                referrer.style.border = "";
+                referrer.style.border = "1px solid green";
+                document.getElementById("referrerError").innerHTML = "referrer is correct"
+
+            }
+
+            document.getElementById("result").innerHTML = `
+                ${firstname.value} <br>
+                ${lastname.value} <br>
+                ${referrer.value} <br>
+            `
+
+        });
+    </script>
+</body>
+</html>

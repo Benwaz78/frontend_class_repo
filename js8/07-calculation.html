@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation</title>
+    <style>
+
+        body{
+            margin: 0;
+        }
+
+        main{
+            display: flex;
+        }
+
+        #sidebar{
+            width: 20%;
+            background-color: blue;
+            height: 100vh;
+        }
+        #content{
+            width: 80%;
+            background-color: red;
+            height: 100vh;
+
+        }
+
+        #sidebar.hide{
+            width: 0;
+        }
+
+        #content.hide{
+            width: 100%;
+        }
+
+       
+
+        header{
+            background-color: green;
+            height: 70px;
+        }
+
+     
+
+
+
+     
+
+       
+
+      
+
+        #btn{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 10px;
+            border:2px solid #fff;
+        }
+      
+
+
+    </style>
+</head>
+<body style="padding-left: 150px; padding-top:100px;">
+
+
+
+
+    <form id="submitForm">
+
+        <label>Number 1</label><br>
+        <input type="text" id="number1"><br>
+        <span id="number1Error"></span><br>
+        <br><br>
+        <label>Number 2</label><br>
+        <input type="text" id="number2"><br>
+        <span id="number2Error"></span><br>
+        <br><br>
+       
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+
+   
+    
+   
+    <script>
+
+        let submitForm = document.getElementById("submitForm");
+        let number1 = document.getElementById("number1");
+        let number2 = document.getElementById("number2");
+        
+
+        submitForm.addEventListener("submit", function(e){
+            e.preventDefault();
+            if(number1.value==""){
+                number1.style.border = "1px solid red";
+                document.getElementById("number1Error").innerHTML = "Number 1 is required";
+            }else{
+                number1.style.border = "";
+                document.getElementById("number1Error").innerHTML = "Number 1 correct";
+            }
+
+            if(number2.value==""){
+                number2.style.border="1px solid red";
+                document.getElementById("number2Error").innerHTML = "Number 2 is required";
+            }else{
+                number2.style.border = "";
+                document.getElementById("number2Error").innerHTML = "Number 2 is correct";
+            }
+        });
+
+        submitForm.addEventListener("keyup", function(e){
+            e.preventDefault();
+            let sum =  parseInt(number1.value) + parseInt(number2.value);
+            document.getElementById("result").innerHTML = `${number1.value} + ${number2.value} = ${sum}`;
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Click</title>
+    <style>
+
+        #content{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <button id="btn1"  onclick="showDiv()">Show Div</button>
+    <!-- <button id="btn2"  onclick="hideDiv()">Hide Div</button> -->
+
+    <div id="content"></div>
+
+
+    <script>
+
+            let showDiv = ()=>{
+                let element = document.getElementById("content");
+                if(element.style.display === "none"){
+                    element.style.display = "block";
+                }else{
+                    element.style.display = "none";
+                }
+            }
+
+            
+        
+    </script>
+</body>
+</html>
