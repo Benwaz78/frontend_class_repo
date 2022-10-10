@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disable Field</title>
+    <style>
+
+       
+    </style>
+</head>
+<body>
+
+    <form id="submitForm">
+        <label>Select State</label><br>
+        <select id="selectState" >
+            <option value="Lagos">Lagos</option>
+            <option value="Abuja">Abuja</option>
+            <option value="Calabar">Calabar</option>
+            <option value="" selected>Select State</option>
+        </select><br>
+        <input type="submit" value="Submit" id="submit">
+
+    </form>
+
+    <script>
+
+        let selectState = document.getElementById("selectState");
+
+        document.addEventListener("DOMContentLoaded", function(){
+
+            let submit = document.getElementById("submit");
+            submit.disabled = true;
+            selectState.addEventListener("change", function(){
+
+                if(selectState.value == ""){
+                    submit.disabled = true;
+                    selectState.style.border="1px solid red";
+                }else{
+                    submit.disabled = false;
+                }
+            })
+        })
+    </script>
+    
+
+   
+</body>
+</html>
